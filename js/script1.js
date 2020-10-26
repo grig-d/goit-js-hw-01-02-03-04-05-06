@@ -33,6 +33,20 @@
 // const category = (age >= 18) ? 'adult' : 'child';
 // console.log(category);
 
+// const stars = 3;
+// let result;
+// switch (stars) {
+//   case 1:
+//     result = 1;
+//     break;
+//   case 2:
+//     result = 2;
+//     break;
+//   default:
+//     result = 0;
+// }
+// console.log(result);
+
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
 // let price = 1000; // Write code on this line
@@ -64,5 +78,4 @@
 //   message = ACCESS_DENIED;
 // }
 
-
-
+// Задача 1-5
