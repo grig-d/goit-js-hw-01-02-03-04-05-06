@@ -47,6 +47,8 @@
 // }
 // console.log(result);
 
+// 00-13-46
+
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
 // let price = 1000; // Write code on this line
@@ -79,3 +81,4 @@
 // }
 
 // Задача 1-5
+// https://homework-js-autocheck.goit.ua/?token=e67afab47edc86c16faa101e36f4bbc165f5f19c4634c61fe67897feba9b9227&block=op6789254
