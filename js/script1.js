@@ -29,4 +29,7 @@
 // const finalAmount = payment - payment * discount;
 // console.log(`Оформляем заказ на сумму ${finalAmount} со скидкой ${discount * 100}%`);
 
+// const age = 12;
+// const category = (age >= 18) ? 'adult' : 'child';
+// console.log(category);
 
