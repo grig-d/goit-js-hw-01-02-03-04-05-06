@@ -33,14 +33,6 @@
 // const category = (age >= 18) ? 'adult' : 'child';
 // console.log(category);
 
-const stars = 3;
-if (stars === 1)
-
-
-
-
-
-
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
 // let price = 1000; // Write code on this line
@@ -61,8 +53,16 @@ if (stars === 1)
 // }
 
 // Задача 1-4
-let totalPrice = orderPieces * pricePerDroid; // Write code on this line
-let balanceCredit = credits - totalPrice; // Write code on this line
-let message;
-if (orderPieces === null) {message = CANCELED_BY_USER;} else if (orderPieces >= 1 && balanceCredit >= 0) {message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;}
+// let totalPrice = orderPieces * pricePerDroid; // Write code on this line
+// let balanceCredit = credits - totalPrice; // Write code on this line
+// let message;
+// if (orderPieces === null) {
+//   message = CANCELED_BY_USER;
+// } else if (orderPieces >= 0 && balanceCredit >= 0) {
+//   message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
+// } else if (balanceCredit < 0) {
+//   message = ACCESS_DENIED;
+// }
+
+
 
