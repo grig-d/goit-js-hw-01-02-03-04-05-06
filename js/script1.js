@@ -47,7 +47,8 @@
 // }
 // console.log(result);
 
-// 00-13-46
+// Random
+// console.log(Math.floor(Math.random() * 10));
 
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
