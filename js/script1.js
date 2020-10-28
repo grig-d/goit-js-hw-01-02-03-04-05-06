@@ -50,6 +50,16 @@
 // Random
 // console.log(Math.floor(Math.random() * 10));
 
+// cycle for
+// for (let count = 0; count < 5; count += 1) {
+//   console.log(Math.floor(Math.random() * 10));
+// }
+
+// cycle do while
+// do {
+//   userInput = Number(prompt('Type 5'));
+// } while (userInput !== 5);
+
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
 // let price = 1000; // Write code on this line
