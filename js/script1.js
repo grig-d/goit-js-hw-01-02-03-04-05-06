@@ -63,8 +63,6 @@
 //   }
 // } while (userInput !== 5);
 
-
-
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
 // let price = 1000; // Write code on this line
