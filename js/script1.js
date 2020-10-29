@@ -58,7 +58,12 @@
 // cycle do while
 // do {
 //   userInput = Number(prompt('Type 5'));
+//   if (userInput === 0) {
+//     break;
+//   }
 // } while (userInput !== 5);
+
+
 
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
