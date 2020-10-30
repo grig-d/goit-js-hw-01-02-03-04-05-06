@@ -63,6 +63,8 @@
 //   }
 // } while (userInput !== 5);
 
+// ------------------------------------------------------------------------------------------------
+
 // Задача 1-1
 // const name = '«Генератор защитного поля»'; // Write code on this line
 // let price = 1000; // Write code on this line
@@ -95,4 +97,43 @@
 // }
 
 // Задача 1-5
-// https://homework-js-autocheck.goit.ua/?token=e67afab47edc86c16faa101e36f4bbc165f5f19c4634c61fe67897feba9b9227&block=op6789254
+// const countryName = "КитаЙ";
+// const CANCELED_BY_USER = 'Отменено пользователем!';
+// const NO_DELIVERY = 'В выбранную страну доставка недоступна.';
+// const CHINA = 'Китай';
+// const AUSTRALIA = 'Австралия';
+// const INDIA = 'Индия';
+// const JAMAICA = 'Ямайка';
+// let message;
+// let price = 0;
+// let country;
+// if (countryName === null) {
+//   message = CANCELED_BY_USER;
+// } else {
+//   country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // Write code on this line
+//   switch (country) {
+//   // Write code under this line
+//     case CHINA:
+//       price = 100;
+//       break;
+//     case AUSTRALIA:
+//       price = 170;
+//       break;
+//     case INDIA:
+//       price = 80;
+//       break;
+//     case JAMAICA:
+//       price = 120;
+//       break;
+//     default:
+//       message = NO_DELIVERY;
+//   }
+// }
+// if (price > 0) { // Write code on this line
+//   message = `Доставка в ${country} будет стоить ${price} кредитов`;
+// }
+// console.log(message);
+
+// ------------------------------------------------------------------------------------------------
+// const a = b || c ? b + c : b - c;
+
