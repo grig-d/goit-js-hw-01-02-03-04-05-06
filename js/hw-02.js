@@ -30,7 +30,13 @@
 // Задача 2-4
 // function formatString(string, maxLength = 40) {
 //   // Write code under this line
+//     if (string.length > maxLength) {
+//         return (string.slice(0, maxLength) + '...');
+//   }
+//   return string;
 // }
+// console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+// console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+
 
 // https://homework-js-autocheck.goit.ua/?token=e67afab47edc86c16faa101e36f4bbc165f5f19c4634c61fe67897feba9b9227&block=p67892355
-
