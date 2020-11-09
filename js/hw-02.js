@@ -32,8 +32,8 @@
 // Задача 2-4
 // function formatString(string, maxLength = 40) {
 //   // Write code under this line
-//     if (string.length > maxLength) {
-//         return (string.slice(0, maxLength) + '...');
+//   if (string.length > maxLength) {
+//     return string.slice(0, maxLength) + '...';
 //   }
 //   return string;
 // }
