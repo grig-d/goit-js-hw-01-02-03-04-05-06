@@ -1,5 +1,3 @@
-// Модуль: 1
-
 // let balance = 10000
 // const payment = 2000
 // console.log(`Сумма заказа ${payment} кредитов. Проверяем кол-во доступных средств на счету:`)
@@ -198,78 +196,142 @@
 //   'Death Dealer',
 //   'Storm Bringer',
 //   'Soul Stealer',
+//   'Hellrider',
 //   'Painkiller',
+//   'Exiled Archangel',
+//   'Angel Ripper',
+//   'Blasphemer',
+//   'Ephemer',
 // ];
-// console.log(theHellPatrol.slice(0,3));
-// ------------------------------------------------------------------------------------------------
+// console.log(theHellPatrol);
+// console.log(theHellPatrol.slice(1, 7));
+// console.log(theHellPatrol.slice(1, 7).slice(5));
 
-// Задача 1-1
-// const name = '«Генератор защитного поля»'; // Write code on this line
-// let price = 1000; // Write code on this line
-// const firstMessage = `Выбран ${name}, цена за штуку ${price} кредитов`; // Write code on this line
-// price = 2000;
-// const secondMessage = `Выбран ${name}, цена за штуку ${price} кредитов`;
+// slice
+// const theHellPatrol = ['Spirit Crusher', 'Exiled Archangel', 'Ephemer'];
+// console.log(theHellPatrol.slice(-1));
 
-// Задача 1-2
-// const message = invoice > stock ? 'На складе недостаточно товаров!' : 'Заказ оформлен, с вами свяжется менеджер';
-
-// Задача 1-3
-// if (userPassword === null) {
-//   message = CANCELED_BY_USER;
-// } else if (userPassword === ADMIN_PASSWORD) {
-//   message = ACCESS_IS_ALLOWED;
-// } else {
-//   message = ACCESS_DENIED;
+// function
+// const add = function () {
+//     console.log('WTF');
 // }
+// add();
 
-// Задача 1-4
-// let totalPrice = orderPieces * pricePerDroid; // Write code on this line
-// let balanceCredit = credits - totalPrice; // Write code on this line
-// let message;
-// if (orderPieces === null) {
-//   message = CANCELED_BY_USER;
-// } else if (orderPieces >= 0 && balanceCredit >= 0) {
-//   message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов`;
-// } else if (balanceCredit < 0) {
-//   message = ACCESS_DENIED;
-// }
-
-// Задача 1-5
-// const countryName = "КитаЙ";
-// const CANCELED_BY_USER = 'Отменено пользователем!';
-// const NO_DELIVERY = 'В выбранную страну доставка недоступна.';
-// const CHINA = 'Китай';
-// const AUSTRALIA = 'Австралия';
-// const INDIA = 'Индия';
-// const JAMAICA = 'Ямайка';
-// let message;
-// let price = 0;
-// let country;
-// if (countryName === null) {
-//   message = CANCELED_BY_USER;
-// } else {
-//   country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // Write code on this line
-//   switch (country) {
-//   // Write code under this line
-//     case CHINA:
-//       price = 100;
-//       break;
-//     case AUSTRALIA:
-//       price = 170;
-//       break;
-//     case INDIA:
-//       price = 80;
-//       break;
-//     case JAMAICA:
-//       price = 120;
-//       break;
-//     default:
-//       message = NO_DELIVERY;
+// function
+// const theHellPatrol = ['Spirit Crusher', 'Exiled Archangel', 'Ephemer'];
+// const numbers = [1, 2, 3];
+// const logItems = function (items) {
+//   for (const item of items) {
+//     console.log(item);
 //   }
-// }
-// if (price > 0) { // Write code on this line
-//   message = `Доставка в ${country} будет стоить ${price} кредитов`;
-// }
-// console.log(message);
+// };
+// logItems(theHellPatrol);
+// logItems(numbers);
 
-// ------------------------------------------------------------------------------------------------
+// function
+// const theHellPatrol = ['Spirit Crusher', 'Exiled Archangel', 'Ephemer'];
+// const demonToFind = 'Ephemer';
+// const findDemon = function (names, name) {
+//   for (const item of names) {
+//     if (name === item) {
+//       return 'is here';
+//     }
+//   }
+//   return 'is absent';
+// };
+// console.log(`${demonToFind} ${findDemon(theHellPatrol, demonToFind)}`);
+
+// function slugify string
+// const slugify = function (string) {
+//   const words = string.toLowerCase().split(' ');
+//   const slug = words.join('-');
+//   return slug;
+// };
+// const title = 'Grandis Spiritus Diabolos';
+// const titleSlugged = slugify(title);
+// console.log(titleSlugged);
+
+// function slugify array
+// const slugify = function (string) {
+//   const words = string.toLowerCase().split(' ');
+//   const slug = words.join('-');
+//   return slug;
+// };
+// const titles = [
+//   'Grandis Spiritus Diabolos',
+//   'Spirit Crusher',
+//   'Exiled Archangel',
+// ];
+// const titlesSlugged = [];
+// for (const title of titles) {
+//     const slugged = slugify(title);
+//     titlesSlugged.push(slugged);
+// }
+// console.log(titlesSlugged);
+
+// function smallest number from array
+// const findSmallestNumber = function (numbersArray) {
+//     let smallestNumber = numbersArray[0];
+//     for (let i = 1; i < numbersArray.length; i += 1) {
+//       if (numbersArray[i] < smallestNumber) {
+//         smallestNumber = numbersArray[i];
+//       }
+//     }
+//     return smallestNumber;
+// }
+// const numbers = [67, 45, 3, 78, 90, 2];
+// const smallestNumber = findSmallestNumber(numbers);
+// console.log(smallestNumber);
+
+// function remove card
+// const removeCard = function (allCards, cardToRemove) {
+//   const index = allCards.indexOf(cardToRemove);
+//   allCards.splice(index, 1);
+// };
+// const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
+// removeCard(cards, 'card-3')
+// console.log(cards);
+
+// function remove card with checking index=-1 - this is guard clause
+// const removeCard = function (allCards, cardToRemove) {
+//   const index = allCards.indexOf(cardToRemove);
+// //guard clause start
+//   if (index === -1) {
+//     console.log('There is nothing to remove');
+//     return;
+//   }
+// //guard clause end
+//   allCards.splice(index, 1);
+// };
+// const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
+// removeCard(cards, 'card-32')
+// console.log(cards);
+
+// function add card
+// const addCard = function (allCards, cardToInsert, position) {
+//   allCards.splice(position - 1, 0, cardToInsert);
+// };
+// const cards = ['card-1', 'card-2', 'card-3', 'card-4', 'card-5'];
+// addCard(cards, 'card-88', 2);
+// console.log(cards);
+
+// add tag manual
+// const posts = ['post-1', 'post-2', 'post-3', 'post-4'];
+// const tag = '#js';
+// const postsWithTag = [];
+// for (const post of posts) {
+//   postsWithTag.push(`${post}${tag}`);
+// }
+// console.log(postsWithTag);
+
+// add tag function
+// const addTag = function (tag, ...args) {
+//   const postsWithTag = [];
+//   for (const arg of args) {
+//     postsWithTag.push(`${arg}${tag}`);
+//   }
+//   return postsWithTag;
+// }
+// addTag('#js', 'post-1', 'post-2', 'post-3', 'post-4');
+// console.log(addTag('#js', 'post-1', 'post-2', 'post-3', 'post-4'));
+
