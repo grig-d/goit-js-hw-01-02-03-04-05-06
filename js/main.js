@@ -335,3 +335,6 @@
 // addTag('#js', 'post-1', 'post-2', 'post-3', 'post-4');
 // console.log(addTag('#js', 'post-1', 'post-2', 'post-3', 'post-4'));
 
+// MODULE 3
+
+
