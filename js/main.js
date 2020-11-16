@@ -337,4 +337,73 @@
 
 // MODULE 3
 
+// const hotel = {
+//   name: 'Hell Hotel',
+//   stars: 5,
+//   capacity: 666,
+// };
+// console.log(hotel.stars);
+// hotel.stars = 6;
+// console.log(hotel.stars);
 
+// меняем свойство объекта
+// const hotel = {
+//   name: 'Hell Hotel',
+//   stars: 6,
+//   capacity: 666,
+// };
+// console.log(hotel);
+// hotel.guests = ['Satan', 'Devil', 'Teufel'];
+// console.log(hotel);
+
+// this - метод для работы с объектом хранится в этом же объекте
+// const hotel = {
+//   name: 'Hell Hotel',
+//   stars: 6,
+//   capacity: 666,
+//   updateName: function (newName) {
+//       this.name = newName;
+//   },
+// };
+// console.log(hotel.name);
+// hotel.updateName('Helvete Hotel');
+// console.log(hotel.name);
+
+// for in для объекта
+// const hotel = {
+//   name: 'Hell Hotel',
+//   stars: 6,
+//   capacity: 666,
+// };
+// for (const key in hotel) {
+//   console.log(hotel[key]);
+// }
+
+// конструктор Object статический метод keys
+// const hotel = {
+//   name: 'Hell Hotel',
+//   stars: 6,
+//   capacity: 666,
+// };
+// const allKeys = Object.keys(hotel);
+// console.log(allKeys);
+// const keyNumber = (allKeys.length);
+// console.log(keyNumber);
+
+// конструктор Object статический метод values
+// const hotel = {
+//   name: 'Hell Hotel',
+//   stars: 6,
+//   capacity: 666,
+// };
+// const allValues = Object.values(hotel);
+// console.log(allValues);
+
+// конструктор Object статический метод entries
+const hotel = {
+  name: 'Hell Hotel',
+  stars: 6,
+  capacity: 666,
+};
+const allEntries = Object.entries(hotel);
+console.log(allEntries);
