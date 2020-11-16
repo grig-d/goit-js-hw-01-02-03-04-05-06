@@ -400,10 +400,31 @@
 // console.log(allValues);
 
 // конструктор Object статический метод entries
-const hotel = {
-  name: 'Hell Hotel',
-  stars: 6,
-  capacity: 666,
-};
-const allEntries = Object.entries(hotel);
-console.log(allEntries);
+// const hotel = {
+//   name: 'Hell Hotel',
+//   stars: 6,
+//   capacity: 666,
+// };
+// const allEntries = Object.entries(hotel);
+// console.log(allEntries);
+
+// массив объектов и поиск по имени
+// const hellPatrol = [
+//   { name: 'Spirit Crusher', online: false },
+//   { name: 'Exiled Archangel', online: true },
+//   { name: 'Ephemer', online: true },
+//   { name: 'Death Dealer', online: false },
+// ];
+// const findDevilByName = function (allDevils, name) {
+//   for (const devil of allDevils) {
+//     if (devil.name === name) {
+//       if (devil.online) {
+//         return `${name} is online`;
+//       }
+//       return `${name} is offline`;
+//     }
+//   }
+//   return `${name} is out of Hell Patrol`;
+// };
+// console.log(findDevilByName(hellPatrol, 'Death Dealer'));
+
