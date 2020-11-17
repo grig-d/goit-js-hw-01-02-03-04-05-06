@@ -428,3 +428,37 @@
 // };
 // console.log(findDevilByName(hellPatrol, 'Death Dealer'));
 
+// массив объектов и массив имен
+// const hellPatrol = [
+//   { name: 'Spirit Crusher', online: false },
+//   { name: 'Exiled Archangel', online: true },
+//   { name: 'Ephemer', online: true },
+//   { name: 'Death Dealer', online: false },
+// ];
+// const getAllNames = function (arr) {
+//   const names = [];
+//   for (const name of arr) {
+//     names.push(name.name);
+//   }
+//   return names;
+// };
+// console.log(getAllNames(hellPatrol));
+
+// массив объектов и поиск имен которые онлайн
+// const hellPatrol = [
+//   { name: 'Spirit Crusher', online: false },
+//   { name: 'Exiled Archangel', online: true },
+//   { name: 'Ephemer', online: true },
+//   { name: 'Death Dealer', online: false },
+// ];
+// const getOnlineDevils = function (allDevils) {
+//   const onlineDevils = [];
+//   for (const devil of allDevils) {
+//     if (devil.online) {
+//       onlineDevils.push(devil.name);
+//     }
+//   }
+//   return onlineDevils;
+// };
+// console.log(getOnlineDevils(hellPatrol));
+
