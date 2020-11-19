@@ -462,28 +462,4 @@
 // };
 // console.log(getOnlineDevils(hellPatrol));
 
-// корзина товаров
-// корзина это объект cart и методом работы с его свойствами
-// создаём интерфейс - это наличие набора методов для работы с данными (API = интерфейс)
-// getItem - метод получения из корзины всех её элементов;
 
-const cart = {
-  items: [],
-  getItems() {
-    return this.items;
-  },
-    add(product) {
-        product.quantity = 1;
-    this.items.push(product);
-    },
-    remove(productName) {
-
-    }
-};
-
-console.table(cart.getItems());
-cart.add({ name: 'apple', price: 50 });
-cart.add({ name: 'banana', price: 50 });
-cart.add({ name: 'cherry', price: 50 });
-cart.add({ name: 'orange', price: 50 });
-console.table(cart.getItems());
