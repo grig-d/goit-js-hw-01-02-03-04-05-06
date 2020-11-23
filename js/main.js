@@ -462,4 +462,115 @@
 // };
 // console.log(getOnlineDevils(hellPatrol));
 
+// деструктуризация объекта по имени свойства
+// (дано:)
+// const hotel = {
+//     name: 'Resort Hotel',
+//     stars: 5,
+//     capacity: 100,
+// };
+// console.log('Name: ', hotel.name);
+// console.log('Stars: ', hotel.stars);
+// console.log('Capacity: ', hotel.capacity);
+// // (деструктуризация:)
+// const { name, stars, capacity } = hotel;
+// console.log('Name: ', name);
+// console.log('Stars: ', stars);
+// console.log('Capacity: ', capacity);
+// // значение по умолчанию
+// const { location = 'California' } = hotel;
+// console.log('Location: ', location);
 
+// деструктуризация например
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+// };
+// const showHotelInfo = function (hotelStats) {
+//   console.log(hotelStats);
+//   const { name, stars, capacity } = hotelStats;
+//   console.log('Name: ', name);
+//   console.log('Stars: ', stars);
+//   console.log('Capacity: ', capacity);
+// };
+// showHotelInfo(hotel);
+
+// можно деструктурировать сразу на входе в функцию:
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+// };
+// const showHotelInfo = function ({ name, stars, capacity }) {
+//   console.log('Name: ', name);
+//   console.log('Stars: ', stars);
+//   console.log('Capacity: ', capacity);
+// };
+// showHotelInfo(hotel);
+
+// деструктуризация с именем которое не совпадает с именем свойства:
+// const hotel = {
+//   name: 'Resort Hotel',
+//   stars: 5,
+//   capacity: 100,
+// };
+// const showHotelInfo = function ({ name: hotelName, stars, capacity }) {
+//   console.log('Name: ', hotelName);
+//   console.log('Stars: ', stars);
+//   console.log('Capacity: ', capacity);
+// };
+// showHotelInfo(hotel);
+
+// глубокая деструктуризация
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+// const {
+//   name,
+//   tag,
+//   location,
+//   avatar,
+//   stats: { followers, views, likes },
+// } = profile;
+// console.log(name, tag, location, avatar, followers, views, likes);
+
+// rest
+// const hotel = {
+//   name: 'Helvete',
+//   stars: 13,
+//   capacity: 666,
+// };
+// const { name, ...rest } = hotel;
+// console.log(name);
+// console.log(rest);
+
+// деструктуризация массива по очереди
+// const rgb = [255, 100, 80];
+// const [red, green, blue] = rgb;
+// console.log(red, green, blue);
+
+// деструктуризация и rest
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+// const { name, tag, location, ...restProps } = profile;
+// console.log(name, tag, location, restProps);
+
+// MODULE 4
