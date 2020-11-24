@@ -574,3 +574,15 @@
 // console.log(name, tag, location, restProps);
 
 // MODULE 4
+// callback
+// hof - high order function - функция, которая возвращает функцию
+
+const greet = function (name) {
+  console.log(`Hello ${name}`);
+};
+const greetWithName = function(callback){
+    const name = 'Devil';
+    console.log(callback);
+};
+greetWithName(greet);
+video 5:43
