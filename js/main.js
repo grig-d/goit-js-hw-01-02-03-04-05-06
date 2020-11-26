@@ -574,15 +574,27 @@
 // console.log(name, tag, location, restProps);
 
 // MODULE 4
-// callback
-// hof - high order function - функция, которая возвращает функцию
 
-const greet = function (name) {
-  console.log(`Hello ${name}`);
-};
-const greetWithName = function(callback){
-    const name = 'Devil';
-    console.log(callback);
-};
-greetWithName(greet);
-video 5:43
+// callback
+// const greet = function (name) {
+//   console.log(`Hello ${name}`);
+// };
+// const greetWithName = function(callback){
+//     const name = 'Devil';
+//   callback(name);
+// };
+// greetWithName(greet);
+
+// callback
+// const buttonRef = document.querySelector('button');
+// const handleButtonClick = function () {
+//   console.log('Click');
+// };
+// buttonRef.addEventListener('click', handleButtonClick);
+
+// callback
+// console.log('String before timeout');
+// setTimeout(function () {console.log('inside timeout')}, 1000);
+// console.log('String after timeout');
+
+// 22:54
