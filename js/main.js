@@ -597,4 +597,25 @@
 // setTimeout(function () {console.log('inside timeout')}, 1000);
 // console.log('String after timeout');
 
-// 22:54
+// callback
+// const printMessage = function(message) {
+//   console.log(message);
+// };
+// const higherOrderFunction = function(callback) {
+//   const string = 'HOCs are awesome';
+//   callback(string);
+// };
+// higherOrderFunction(printMessage);
+
+
+let val = 7;
+function createAdder() {
+  function addNumbers(a, b) {
+    let ret = a + b;
+    return ret;
+  }
+  return addNumbers;
+}
+let adder = createAdder();
+let sum = adder(val, 8);
+console.log('example of function returning a function: ', sum);
