@@ -597,7 +597,7 @@
 // setTimeout(function () {console.log('inside timeout')}, 1000);
 // console.log('String after timeout');
 
-// callback
+// // callback
 // const printMessage = function(message) {
 //   console.log(message);
 // };
@@ -621,23 +621,45 @@
 // let sum = adder(val, 8);
 // console.log('example of function returning a function: ', sum);
 
+// // замыкание
+// function createCounter() {
+//   let counter = 0;
+//   const myFunction = function () {
+//     counter = counter + 1;
+//     return counter;
+//   };
+//   return myFunction;
+// }
+// const increment = createCounter();
+// const c1 = increment();
+// const c2 = increment();
+// const c3 = increment();
+// console.log('example increment', c1, c2, c3);
 
+// // замыкание
+// let c = 4
+// function addX(x) {
+//   return function(n) {
+//      return n + x
+//   }
+// }
+// const addThree = addX(3)
+// let d = addThree(c)
+// console.log('example partial application', d)
 
+const printValue = function(value) {
+  console.log(value);
+};
 
+const prettyPrint = function(value) {
+  console.log('Logging value: ', value);
+};
 
-
-
-
-function createCounter() {
-  let counter = 0;
-  const myFunction = function () {
-    counter = counter + 1;
-    return counter;
-  };
-  return myFunction;
-}
-const increment = createCounter();
-const c1 = increment();
-const c2 = increment();
-const c3 = increment();
-console.log('example increment', c1, c2, c3);
+const repeat = function(n, action) {
+  for (let i = 0; i < n; i += 1) {
+    action(i);
+  }
+};
+repeat(3, printValue); // printValue - callback
+repeat(3, prettyPrint); // prettyPrint - callback
+// http://fecore.net.ua/books/m5ph3r-javascript/module-04/callbacks.html
