@@ -553,7 +553,7 @@
 // console.log(name);
 // console.log(rest);
 
-// деструктуризация массива по очереди
+// // деструктуризация массива по очереди
 // const rgb = [255, 100, 80];
 // const [red, green, blue] = rgb;
 // console.log(red, green, blue);
@@ -647,19 +647,63 @@
 // let d = addThree(c)
 // console.log('example partial application', d)
 
-const printValue = function(value) {
-  console.log(value);
-};
+// // callback
+// const printValue = function (value) {
+//   console.log(value);
+// };
+// const prettyPrint = function (value) {
+//   console.log('Logging value: ', value);
+// };
+// const repeat = function (n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// };
+// repeat(3, printValue); // printValue - callback
+// repeat(3, prettyPrint); // prettyPrint - callback
 
-const prettyPrint = function(value) {
-  console.log('Logging value: ', value);
-};
+// // callback
+// const printName = function (name) {
+//   console.log(name);
+// };
+// const arrayName = ['Spirit Crusher', 'Exiled Archangel', 'Ephemer'];
+// const repeatFu = function (arr, action) {
+//   for (let i = 0; i < arr.length; i++) {
+//     action(arr[i]);
+//   };
+// };
+// repeatFu(arrayName, printName);
 
-const repeat = function(n, action) {
-  for (let i = 0; i < n; i += 1) {
-    action(i);
-  }
-};
-repeat(3, printValue); // printValue - callback
-repeat(3, prettyPrint); // prettyPrint - callback
+// // callback
+// const repeat = function (n, action) {
+//   for (let i = 0; i < n; i += 1) {
+//     action(i);
+//   }
+// };
+// const labels = [];
+// repeat(5, value => {
+//   labels.push(`Label ${value + 1}`);
+// });
+// console.log(labels); // ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"]
 
+// // фильтрация массива
+// const filter = function (array, test) {
+//   //test is callback
+//   const filteredElements = [];
+//   for (const element of array) {
+//     const passed = test(element);
+//     if (passed) {
+//       filteredElements.push(element);
+//     }
+//   }
+//   return filteredElements;
+// };
+// const fruits = [
+//   { name: 'apples', quantity: 200, isFresh: true },
+//   { name: 'grapes', quantity: 150, isFresh: false },
+//   { name: 'bananas', quantity: 100, isFresh: true },
+// ];
+// const freshFruits = filter(fruits, fruit => fruit.isFresh);
+// console.log(freshFruits); // массив с объектами apples и bananas
+// const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
+// console.log(fruitsWithQuantity); // массив с объектами apples и grapes
