@@ -662,4 +662,4 @@ const repeat = function(n, action) {
 };
 repeat(3, printValue); // printValue - callback
 repeat(3, prettyPrint); // prettyPrint - callback
-// http://fecore.net.ua/books/m5ph3r-javascript/module-04/callbacks.html
+
