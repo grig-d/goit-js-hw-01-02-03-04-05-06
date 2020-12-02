@@ -707,3 +707,5 @@
 // console.log(freshFruits); // массив с объектами apples и bananas
 // const fruitsWithQuantity = filter(fruits, fruit => fruit.quantity >= 120);
 // console.log(fruitsWithQuantity); // массив с объектами apples и grapes
+
+// time34-11
