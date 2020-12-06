@@ -789,7 +789,7 @@
 // };
 // user.showTag();
 
-// // bind (привязка контекста)
+// // call
 // // вместо этого:
 // const showTag = function () {
 //   console.log('this: ', this);
@@ -808,15 +808,90 @@
 // вот это:
 // // (чтобы не копировать метод showTag в каждый объект)
 // // можно вызвать функцию в контексте какого-то объекта не делая её методом
-const showTag = function () {
-  console.log('this: ', this);
-  console.log('this.tag: ', this.tag);
-};
-const mango = {
-  tag: 'Mango',
-};
-const poly = {
-  tag: 'Poly',
-};
-showTag.call(mango);
-showTag.call(poly);
+// const showTag = function () {
+//   console.log('this: ', this);
+//   console.log('this.tag: ', this.tag);
+// };
+// const mango = {
+//   tag: 'Mango',
+// };
+// const poly = {
+//   tag: 'Poly',
+// };
+// showTag.call(mango);
+// showTag.call(poly);
+
+// // bind (привязка контекста)
+// const showTag = function () {
+//   console.log('this: ', this);
+//   console.log('this.tag: ', this.tag);
+// };
+// const mango = {
+//   tag: 'Mango',
+// };
+// const poly = {
+//   tag: 'Poly',
+// };
+// const showMangoTag = showTag.bind(mango);
+// showMangoTag();
+// const showPolyTag = showTag.bind(poly);
+// showPolyTag();
+
+// // можно брать метод одного объекта и байндить его к другому объекту, у которого нет такого метода
+// const mango = {
+//   tag: 'Mango',
+//   showTag() {
+//     console.log(this.tag);
+//   },
+// };
+// const poly = {
+//   tag: 'Poly',
+// };
+// const showPolyTag = mango.showTag.bind(poly);
+// showPolyTag();
+
+// function showThis() {
+//   console.log('this in showThis: ', this);
+// }
+// showThis();
+// const user = { name: 'Mango' };
+// user.showContext = showThis;
+// user.showContext();
+
+// const greet = function() {
+//   return `Wellcome to ${this.name} hotel!`;
+// };
+// const hotel = { name: 'Resort Hotel' };
+// console.log(greet.call(hotel)); // "Wellcome to Resort Hotel!"
+// console.log(greet.apply(hotel)); // "Wellcome to Resort Hotel!"
+
+// const greet = function(guest, stars) {
+//   return `${guest}, welcome to ${stars}-star ${this.name}!`;
+// };
+// const hotel = { name: 'Resort Hotel' };
+// const motel = { name: 'Sunlight Motel' };
+// console.log(greet.call(hotel, 'Mango', 5));
+// // "Mango, wellcome to 5-star Resort Hotel!"
+// console.log(greet.call(motel, 'Poly', 4));
+// // "Poly, wellcome to 4-star Sunlight Motel!"
+
+// // bind
+// const greet = function(guest) {
+//   return `${guest}, welcome to ${this.name}!`;
+// };
+// const hotel = { name: 'Resort Hotel' };
+// const hotelGreeter = greet.bind(hotel, 'Mango');
+// console.log(hotelGreeter()); // "Mango, wellcome to Resort Hotel!"
+
+// // bind and callback
+// const hotel = {
+//   name: 'Resort Hotel',
+//   showThis() {
+//     console.log(this);
+//   },
+// };
+// const fn = function(callback) {
+//   callback();
+// };
+// // Передаем копию метода showThis с контекстом привязанным к hotel
+// fn(hotel.showThis.bind(hotel)); // {name: "Resort Hotel", showThis: ƒ}
