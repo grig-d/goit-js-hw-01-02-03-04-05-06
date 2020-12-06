@@ -736,17 +736,87 @@
 // makeDish('Devil', 'apple pie');
 // makeDish('Devil', 'hell juice');
 // makeDish('Devil', 'burger from hell');
-// // хороший подход с замыканием
+
+// // хороший подход с замыканием - каррирование
 // const makeShef = function (name) {
 //   return function makeDish(dish) {
 //     console.log(`${name} is cooking ${dish}`);
 //   };
 // };
 // const devil = makeShef('Devil');
+// const teufel = makeShef('Teufel');
 // devil('apple pie');
 // devil('hell juice');
-// devil('burger from hell');
+// teufel('burger from hell');
+// teufel('potato');
 
+// // Замыкание closure
+// function fu() {
+//   const x = 5;
+//   return function () {console.log(x)};
+// }
+// const outerFu = fu();
+// outerFu(); // замыкание запомнило значение 5 из лек.окружения
 
+// // Замыкание closure
+// const fnA = function (a) {
+//     return function fnB(b) {
+//         return function fnC(c) {
+//             console.log(a, b, c);
+//         };
+//     };
+// };
+// const res = fnA(5)(10);
+// res(15);
 
-// time34-11
+// // контекст this
+// const showTag = function () {
+//   console.log('this.tag: ', this.tag);
+// };
+// const user = {
+//     tag: 'Spirit Crusher',
+// };
+// user.fu = showTag; //{tag: "Spirit Crusher", fu: ƒ}
+// user.fu();
+
+// // контекст this
+// const user = {
+//   tag: 'Spirit Crusher',
+//   //здесь showTag() это метод объекта
+//   showTag() {
+//     console.log('this.tag: ', this.tag);
+//   },
+// };
+// user.showTag();
+
+// // bind (привязка контекста)
+// // вместо этого:
+// const showTag = function () {
+//   console.log('this: ', this);
+//   console.log('this.tag: ', this.tag);
+// };
+// const mango = {
+//   tag: 'Mango',
+//   showTag,
+// };
+// const poly = {
+//   tag: 'Poly',
+//   showTag,
+// };
+// mango.showTag();
+// poly.showTag();
+// вот это:
+// // (чтобы не копировать метод showTag в каждый объект)
+// // можно вызвать функцию в контексте какого-то объекта не делая её методом
+const showTag = function () {
+  console.log('this: ', this);
+  console.log('this.tag: ', this.tag);
+};
+const mango = {
+  tag: 'Mango',
+};
+const poly = {
+  tag: 'Poly',
+};
+showTag.call(mango);
+showTag.call(poly);
