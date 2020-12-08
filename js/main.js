@@ -895,3 +895,5 @@
 // };
 // // Передаем копию метода showThis с контекстом привязанным к hotel
 // fn(hotel.showThis.bind(hotel)); // {name: "Resort Hotel", showThis: ƒ}
+
+// ООП
