@@ -897,3 +897,30 @@
 // fn(hotel.showThis.bind(hotel)); // {name: "Resort Hotel", showThis: ƒ}
 
 // ООП
+
+// // прототип
+// const animal = {
+//   legs: 4,
+// };
+// const dog = Object.create(animal);
+// dog.name = 'Пёс';
+// console.log(dog); // {name: 'Пёс'}
+// console.log(dog.name); // 'Пёс'
+// console.log(dog.legs); // 4
+
+// // проверка на собственноые свойства
+// const book = {
+//   title: 'Последнее королевство',
+//   author: 'Бернард Корнуэлл',
+//   genres: ['историческая проза', 'приключения'],
+//   rating: 8.38,
+// };
+// for (const key in book) {
+//   // Если это собственное свойство - выполняем тело if
+//   if (book.hasOwnProperty(key)) {
+//     console.log(key);
+//     console.log(book[key]);
+//   }
+//   // Если это не собственное свойство - ничего не делаем
+// }
+
