@@ -213,3 +213,154 @@
 // const bestScore = Math.max(...allScores);
 // const worstScore = Math.min(...allScores);
 
+// // spread распыление объектов
+// // 29
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// // Пиши код ниже этой строки
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+
+// // 30
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'Общее';
+//   const priority = 'Обычный';
+//   // Пиши код ниже этой строки
+//   return { category, priority, ...data, completed };
+//   // Пиши код выше этой строки
+// }
+// console.log(
+//   makeTask({ category: 'Домашнее', priority: 'Низкий', text: 'Вынести мусор' }),
+// ); // { category: 'Домашнее', priority: 'Низкий', text: 'Вынести мусор', completed: false }
+// console.log(makeTask({ category: 'Финансы', text: 'Забрать проценты' })); // { category: 'Финансы', priority: 'Обычный', text: 'Забрать проценты', completed: false }
+// console.log(makeTask({ priority: 'Низкий', text: 'Выбрать шампунь' })); // { category: 'Общее', priority: 'Низкий', text: 'Выбрать шампунь', completed: false }
+// console.log(makeTask({ text: 'Купить хлеб' })); // { category: 'Общее', priority: 'Обычный', text: 'Купить хлеб', completed: false }
+
+// // rest
+// function addOverNum(firstNumber, ...args) {
+//   let total = 0;
+//   for (const arg of args) {
+//     if (arg > firstNumber) {
+//       total += arg;
+//     }
+//   }
+//   return total;
+//   // Пиши код выше этой строки
+// }
+
+// // splice
+// // 35
+// const bookShelf = {
+//   books: ['Последнее королевство', 'Мгла', 'Страж снов'],
+//   updateBook(oldName, newName) {
+//     // Пиши код ниже этой строки
+//       const index = this.books.indexOf(oldName);
+//       if (index >= 0) {
+//           this.books.splice(index, 1, newName);
+//       }
+//       console.log(this.books);
+//     // Пиши код выше этой строки
+//   },
+// };
+// bookShelf.updateBook('Мгла', 'Хроники подземелий');
+// console.log(bookShelf);
+// bookShelf.updateBook('Последнее королевство', 'Дюна');
+// console.log(bookShelf);
+
+// // 36 37 38 39 40
+// const atTheOldToad = {
+//   potions: ['Зелье скорости', 'Дыхание дракона', 'Каменная кожа'],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(potionName) {
+//     this.potions.push(potionName);
+//   },
+//   removePotion(potionName) {
+//     const index = this.potions.indexOf(potionName);
+//     if (index >= 0) {
+//       this.potions.splice(index, 1);
+//     }
+//   },
+//   updatePotionName(oldName, newName) {
+//     const index = this.potions.indexOf(oldName);
+//     if (index >= 0) {
+//       this.potions.splice(index, 1, newName);
+//     }
+//     },
+
+// };
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.addPotion('Невидимка');
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.addPotion('Зелье силы');
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.removePotion('Невидимка');
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.removePotion('Зелье силы');
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.updatePotionName('Дыхание дракона', 'Полиморф');
+// console.log(atTheOldToad.getPotions());
+// atTheOldToad.updatePotionName('Каменная кожа', 'Невидимка');
+// console.log(atTheOldToad.getPotions());
+
+// // 41
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Зелье скорости', price: 460 },
+//     { name: 'Дыхание дракона', price: 780 },
+//     { name: 'Каменная кожа', price: 520 },
+//   ],
+//   // Пиши код ниже этой строки
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(potionName) {
+//     if (this.potions.includes(potionName)) {
+//       return `Зелье ${potionName} уже есть в инвентаре!`;
+//     }
+//     this.potions.push(potionName);
+//   },
+//   removePotion(potionName) {
+//     let potionIndex = -1;
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       if (this.potions[i].name === potionName) {
+//         potionIndex = i;
+//         break;
+//       }
+//     }
+//     if (potionIndex === -1) {
+//       return `Зелья ${potionName} нет в инвентаре!`;
+//     }
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   updatePotionName(oldName, newName) {
+//     let potionIndex = -1;
+//     for (let i = 0; i < this.potions.length; i += 1) {
+//       if (this.potions[i].name === oldName) {
+//         potionIndex = i;
+//         break;
+//       }
+//     }
+//     if (potionIndex === -1) {
+//       return `Зелья ${oldName} нет в инвентаре!`;
+//     }
+//     this.potions[potionIndex].name = newName;
+//   },
+//   // Пиши код выше этой строки
+// };
+// atTheOldToad.addPotion({ name: 'Невидимка', price: 620 });
+// atTheOldToad.addPotion({ name: 'Зелье силы', price: 270 });
+// atTheOldToad.removePotion('Дыхание дракона');
+// atTheOldToad.updatePotionName('Каменная кожа', 'Зелье неуязвимости');
+// console.log(atTheOldToad.getPotions());
