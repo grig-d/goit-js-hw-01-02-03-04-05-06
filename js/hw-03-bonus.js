@@ -129,3 +129,87 @@
 // // Пиши код выше этой строки
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 // console.log(meanTemperature); //29
+
+// // деструктуризация с новыми именами переменных
+// // 23
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// // Пиши код ниже этой строки
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+// // Пиши код выше этой строки
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+// console.log(meanTemperature); //29
+
+// // глубокая деструктуризация
+// // 25
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+// // Пиши код ниже этой строки
+// const {
+//   today: {
+//     high: highToday,
+//     low: lowToday,
+//     icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+//   tomorrow: {
+//     high: highTomorrow,
+//     low: lowTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+// } = forecast;
+
+// // деструктуризация паттерн объект настроек
+// // 26
+// const forecast = {
+//   today: { low: 10, high: 20 },
+//   tomorrow: { low: 20, high: 30 },
+// };
+// // Пиши код ниже этой строки
+// function calculateMeanTemperature(forecast) {
+//   const {
+//     today: { low: todayLow, high: todayHigh },
+//     tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//   } = forecast;
+//   // Пиши код выше этой строки
+//   return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
+// }
+// console.log(calculateMeanTemperature(forecast));
+
+// // spread распыление массивов
+// // 27
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// // Пиши код ниже этой строки
+// const bestScore = Math.max(...scores); // Math.max(89, 64, 42, 17, 93, 51, 26)
+// const worstScore = Math.min(...scores);
+
+// // spread распыление массивов
+// // 28
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// // Пиши код ниже этой строки
+// const allScores = [
+//   ...firstGroupScores,
+//   ...secondGroupScores,
+//   ...thirdGroupScores,
+// ];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
