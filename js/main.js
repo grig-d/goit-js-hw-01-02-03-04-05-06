@@ -924,3 +924,28 @@
 //   // Если это не собственное свойство - ничего не делаем
 // }
 
+// // конструктор
+// const Manager = function (name, sales) {
+//     this.name = name;
+//     this.sales = sales;
+// };
+// // Manager - это конструктор с одинаковым набором свойств, но значения в экземплярах разные:
+// const mango = new Manager('Mango', 5); // экземпляр объекта
+// console.log(mango); // Manager {name: "Mango", sales: 5}
+// const poly = new Manager('Poly', 10); // экземпляр объекта
+// console.log(poly); // Manager {name: "Poly", sales: 10}
+
+// // конструктор прототип
+// const Manager = function (name, sales) {
+//     this.name = name;
+//     this.sales = sales;
+// };
+// // sell - кастомное свойство, которое не является свойством каждого экземпляра, но доступно экземпляру как метод
+// Manager.prototype.sell = function () {
+//     this.sales += 1;
+// }
+// // Manager - это конструктор с одинаковым набором свойств, но значения в экземплярах разные:
+// const mango = new Manager('Mango', 5); // экземпляр объекта
+// console.log(mango); // Manager {name: "Mango", sales: 5}
+// const poly = new Manager('Poly', 10); // экземпляр объекта
+// console.log(poly); // Manager {name: "Poly", sales: 10}
