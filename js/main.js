@@ -949,3 +949,25 @@
 // console.log(mango); // Manager {name: "Mango", sales: 5}
 // const poly = new Manager('Poly', 10); // экземпляр объекта
 // console.log(poly); // Manager {name: "Poly", sales: 10}
+
+// // Магазин
+// const Manager = function (name = 'manager', sales = 0) {
+//     this.name = name;
+//     this.sales = sales;
+  
+//     this.sell = function (product) {
+//       this.sales += 1;
+//       return `Manager ${this.name} sold ${product}.`;
+//     };
+//   };
+
+// // Прототип - это резервное хранилище свойств и методов объекта
+// const animal = { eats: true };
+// const dog = { barks: true };
+// dog.__proto__ = animal;
+// // В dog можно найти оба свойства
+// console.log(dog.barks); // true
+// console.log(dog.eats); // true
+
+// [[Prototype]] - свойство объекта в спецификации
+// __proto__ - свойство объекта в консоли - в нем ссылка на другой объект или Object
