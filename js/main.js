@@ -954,7 +954,7 @@
 // const Manager = function (name = 'manager', sales = 0) {
 //     this.name = name;
 //     this.sales = sales;
-  
+
 //     this.sell = function (product) {
 //       this.sales += 1;
 //       return `Manager ${this.name} sold ${product}.`;
@@ -971,3 +971,33 @@
 
 // [[Prototype]] - свойство объекта в спецификации
 // __proto__ - свойство объекта в консоли - в нем ссылка на другой объект или Object
+
+// // Hero - общий конструктор с дефолтными полями общими для всех классов
+// // Warrior и Wizard - конструкторы, которые имеют свои собственные поля, а также должны иметь доступ к полям Hero
+// const Hero = function (name, xp) {
+//   this.name = name;
+//   this.xp = xp;
+// };
+// Hero.prototype.gainXp = function (amount) {
+//   console.log(`${this.name} gained ${amount} experience points`);
+//   this.xp += amount;
+// };
+// const mango = new Hero('Mango', 1000);
+// console.log(mango); // Hero { name: 'Mango', xp: 1000 }
+// mango.gainXp(500);
+// console.log(mango); // Hero { name: 'Mango', xp: 1500 }
+// const Warrior = function (name, xp, weapon) {
+//   Hero.call(this, name, xp);
+//   this.weapon = weapon;
+// };
+// Warrior.prototype = Object.create(Hero.prototype);
+// Warrior.prototype.constructor = Warrior;
+// Warrior.prototype.attack = function () {
+//   console.log(`${this.name} attacks with ${this.weapon}`);
+// };
+// const poly = new Warrior('Poly', 200, 'sword');
+// console.log(poly); // Warrior {name: "Poly", xp: 200, weapon: "sword"}
+// poly.attack(); // Poly attacks with sword
+// poly.gainXp(300); // Poly gained 300 experience points
+
+
