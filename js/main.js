@@ -1000,4 +1000,70 @@
 // poly.attack(); // Poly attacks with sword
 // poly.gainXp(300); // Poly gained 300 experience points
 
+// // Класс
+// class Guest {
+//   constructor(name, roomNumber) {
+//     this.name = name;
+//     this.roomNumber = roomNumber;
+//   }
+//   getFullInfo() {
+//     //это метод класса, доступен всем экземплярам через prototype
+//     console.log(`Guest ${this.name} Room number ${this.roomNumber}`);
+//   }
+// }
+// const mango = new Guest('Mango', 26);
+// console.log(mango);
+// mango.getFullInfo(); // Guest Mango Room number 26
+
+// // статические методы
+// class Calc {
+//   // Класс-калькулятор для двух аргументов
+//   constructor() {}
+//   // Метод как замена свойству
+//   static get PI() {
+//     return 3.14;
+//   }
+//   // Статический метод +
+//   static add(...args) {
+//     return args.reduce((acc, next) => acc + next, 0);
+//   }
+//   // Статический метод *
+//   static mult(...args) {
+//     return args.reduce((acc, next) => acc * next, 1);
+//   }
+// }
+// console.log(Calc.PI); //3.14
+// console.log(Calc.add(2, 3, 4)); //9
+// console.log(Calc.mult(12, 3, 4)); //144
+
+// // наследование классов extends
+// class Animal {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   move() {
+//     return console.log(`I, ${this.name}, am moving!`);
+//   }
+// }
+// class Dog extends Animal {
+//     constructor(name, breed) {
+//         // Вызвать конструктор Animal с аргументом name
+//         super(name);
+//         this.breed = breed;
+//     }
+//     bark() {
+//         console.log(`woof!`);
+//     }
+//     moveAndMakeSound() {
+//         super.move();
+//         this.bark();
+//     }
+// }
+// const dog = new Dog('Mango', 'shepherd');
+// console.log(dog); // Dog {name: "Mango", breed: "shepherd"}
+// dog.move(); // I, Mango, am moving!
+// dog.bark(); // woof!
+// dog.moveAndMakeSound(); // I, Mango, am moving! woof!
+// console.log(Animal.prototype); // методы Animal
+// console.log(Dog.prototype); // методы Dog
 
