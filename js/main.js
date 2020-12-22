@@ -1067,3 +1067,85 @@
 // console.log(Animal.prototype); // методы Animal
 // console.log(Dog.prototype); // методы Dog
 
+// Модуль 5. Занятие 10. Классы[JS-18]
+
+// // старт здесь:
+// const Hero = function (name, xp) {
+//   this.name = name;
+//   this.xp = xp;
+// };
+// const mango = new Hero('Mango', 1000);
+// console.log(mango);
+// // Hero {name: "Mango", xp: 1000}
+// // mango это экземпляр Hero, это объект и в __proto__ у него лежит ссылка на свойство Hero.prototype; в этом свойстве хранятся методы для Hero
+// // все экземпляры имеют доступ по ссылке к методам, которые лежат в Hero.prototype
+// Hero.prototype.changeName = function (name) {
+//   this.name = name;
+// };
+// // changeName - находится в Hero в свойстве prototype, а ссылка на него находится в __proto__ у экземпляра
+// Hero.description = 'This is a Hero base class';
+// // description - это статическое свойство и оно недоступно для экземпляров
+// console.log(mango.description); // undefined
+// // статический метод находится на самом конструкторе:
+// Hero.showStats = function (hero) {
+//   console.log('Logging stats from Hero.showStats: ', hero);
+// };
+// // и доступен только для класса, не для экземпляра; но доступен через имя самого класса:
+// Hero.showStats(mango); // Logging stats from Hero.showStats:  Hero {name: "Mango", xp: 1000}
+
+// // теперь переписываем на классах код после строки 'старт здесь:'
+// class Hero {
+//   static description = `This is a Hero base class`;
+//   // showStats - статическое свойство на классе Hero
+//   static showStats(hero) {
+//     console.log('Logging stats from Hero.showStats: ', hero);
+//   }
+//   constructor(name, xp) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+//   // changeName - метод класса автоматически попадает в свойство prototype класса Hero и на него есть ссылка у экземпляра в свойстве __proto__:
+//   changeName(name) {
+//     this.name = name;
+//   }
+//   // gainXp - метод класса автоматически попадает в свойство prototype класса Hero и на него есть ссылка у экземпляра в свойстве __proto__:
+//   gainXp(amount) {
+//     console.log(`${this.name} получил ${amount} опыта`);
+//     this.xp += amount;
+//   }
+// }
+// const mango = new Hero('Mango', 1000);
+// console.log(mango); // Hero {name: "Mango", xp: 1000}
+// mango.gainXp(2000); // Mango получил 2000 опыта
+// console.log(mango); // Hero {name: "Mango", xp: 3000}
+
+// // геттер сеттер getter setter - синтаксис
+// class Hero {
+//   static description = `This is a Hero base class`;
+//   static showStats(hero) {
+//     console.log('Logging stats from Hero.showStats: ', hero);
+//   }
+//   constructor(name, xp) {
+//     this._name = name;
+//     this._xp = xp;
+//   }
+//   // геттер
+//   get name() {
+//     return this._name;
+//   }
+//   set name(newName) {
+//     this._name = newName;
+//   }
+//   gainXp(amount) {
+//     console.log(`${this.name} получил ${amount} опыта`);
+//     this.xp += amount;
+//   }
+// }
+// const mango = new Hero('Mango', 1000);
+// // геттер - это не обращение к свойству, это метод, который не надо вызывать (не нужны скобки)
+// console.log(mango.name); // Mango
+// // сеттер
+// mango.name = 'MangoDog';
+// console.log(mango.name); // MangoDog
+
+

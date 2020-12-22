@@ -111,40 +111,4 @@
 // console.log(builder.value); // '=^.^='
 
 // Задача 5-5
-class Car {
-  // Write code under this line
-  static getSpecs(carName) {
-      const { maxSpeed, speed, isOn, distance, price } = carName;
-      console.log(maxSpeed, speed, isOn, distance, price);
-    return `maxSpeed: ${maxSpeed}, speed: ${speed}, isOn: ${this.isOn}, distance: ${this.distance}, price: ${price}`;
-  }
-  constructor() {}
-  get price() {}
-  set price(value) {}
-  turnOn() {}
-  turnOff() {}
-  accelerate(value) {}
-  decelerate(value) {}
-  drive(hours) {}
-}
 
-const mustang = new Car({ maxSpeed: 200, price: 2000 });
-console.log(mustang);
-mustang.turnOn();
-mustang.accelerate(50);
-mustang.drive(2);
-
-console.log(Car.getSpecs(mustang));
-// 'maxSpeed: 200, speed: 50, isOn: true, distance: 100, price: 2000'
-
-mustang.decelerate(20);
-mustang.drive(1);
-mustang.turnOff();
-
-// console.log(Car.getSpecs(mustang));
-// 'maxSpeed: 200, speed: 0, isOn: false, distance: 130, price: 2000'
-
-// console.log(mustang.price); // 2000
-mustang.price = 4000;
-// console.log(mustang.price); // 4000
-//////////////////////////////////////////////////////////////////
