@@ -1133,6 +1133,7 @@
 //   get name() {
 //     return this._name;
 //   }
+//   // сеттер
 //   set name(newName) {
 //     this._name = newName;
 //   }
@@ -1148,4 +1149,37 @@
 // mango.name = 'MangoDog';
 // console.log(mango.name); // MangoDog
 
+// наследование
+class Hero {
+  constructor(name, xp) {
+    this._name = name;
+    this._xp = xp;
+  }
+  get name() {
+    return this._name;
+  }
+  set name(newName) {
+    this._name = newName;
+  }
+  gainXp(amount) {
+    console.log(`${this.name} получил ${amount} опыта`);
+    this.xp += amount;
+  }
+}
+// делаем класс, который расширяет класс Hero:
+class Warrior extends Hero { //extends делает вот так: Warrior.prototype.__proto__ === Hero.prototype
+  constructor(name, xp, weapon) {
+      super(name, xp);
+    this._weapon = weapon;
+  }
+  attack() {
+    console.log(`${this._name} атакует используя ${this._weapon}`); // name надо взять от Hero, для этого используем наследование extends Hero
+  }
+}
+// const mango = new Hero('Mango', 1000);
+const mango = new Warrior('Mango', 1000, 'Sword');
+console.log(mango); // Hero {_name: "Mango", _xp: 1000}
+mango.attack(); // Mango атакует используя Sword
+mango.gainXp(2000);
 
+// 46-15
