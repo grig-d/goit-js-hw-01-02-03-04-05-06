@@ -1183,3 +1183,4 @@ mango.attack(); // Mango атакует используя Sword
 mango.gainXp(2000);
 
 // 46-15
+
