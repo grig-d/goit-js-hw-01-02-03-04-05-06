@@ -1167,9 +1167,10 @@ class Hero {
   }
 }
 // делаем класс, который расширяет класс Hero:
-class Warrior extends Hero { //extends делает вот так: Warrior.prototype.__proto__ === Hero.prototype
+class Warrior extends Hero {
+  //extends делает вот так: Warrior.prototype.__proto__ === Hero.prototype
   constructor(name, xp, weapon) {
-      super(name, xp);
+    super(name, xp);
     this._weapon = weapon;
   }
   attack() {
@@ -1181,6 +1182,17 @@ const mango = new Warrior('Mango', 1000, 'Sword');
 console.log(mango); // Hero {_name: "Mango", _xp: 1000}
 mango.attack(); // Mango атакует используя Sword
 mango.gainXp(2000);
-
-// 46-15
-
+class Paladin extends Warrior {
+  constructor(name, xp, weapon, spell) {
+    super(name, xp, weapon);
+    this.spell = spell;
+  }
+  cast() {
+    console.log(`${this.name} бросает ${this.spell}`);
+  }
+}
+const poly = new Paladin('Poly', 800, 'Axe', 'Heal');
+console.log(poly); // Paladin {_name: "Poly", _xp: 800, _weapon: "Sword", spell: "Healing"}
+poly.attack();
+poly.gainXp(400);
+poly.cast();
