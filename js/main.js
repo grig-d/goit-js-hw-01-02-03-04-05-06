@@ -1149,50 +1149,73 @@
 // mango.name = 'MangoDog';
 // console.log(mango.name); // MangoDog
 
-// наследование
-class Hero {
-  constructor(name, xp) {
-    this._name = name;
-    this._xp = xp;
-  }
-  get name() {
-    return this._name;
-  }
-  set name(newName) {
-    this._name = newName;
-  }
-  gainXp(amount) {
-    console.log(`${this.name} получил ${amount} опыта`);
-    this.xp += amount;
-  }
-}
-// делаем класс, который расширяет класс Hero:
-class Warrior extends Hero {
-  //extends делает вот так: Warrior.prototype.__proto__ === Hero.prototype
-  constructor(name, xp, weapon) {
-    super(name, xp);
-    this._weapon = weapon;
-  }
-  attack() {
-    console.log(`${this._name} атакует используя ${this._weapon}`); // name надо взять от Hero, для этого используем наследование extends Hero
-  }
-}
-// const mango = new Hero('Mango', 1000);
-const mango = new Warrior('Mango', 1000, 'Sword');
-console.log(mango); // Hero {_name: "Mango", _xp: 1000}
-mango.attack(); // Mango атакует используя Sword
-mango.gainXp(2000);
-class Paladin extends Warrior {
-  constructor(name, xp, weapon, spell) {
-    super(name, xp, weapon);
-    this.spell = spell;
-  }
-  cast() {
-    console.log(`${this.name} бросает ${this.spell}`);
-  }
-}
-const poly = new Paladin('Poly', 800, 'Axe', 'Heal');
-console.log(poly); // Paladin {_name: "Poly", _xp: 800, _weapon: "Sword", spell: "Healing"}
-poly.attack();
-poly.gainXp(400);
-poly.cast();
+// // наследование
+// class Hero {
+//   constructor(name, xp) {
+//     this._name = name;
+//     this._xp = xp;
+//   }
+//   get name() {
+//     return this._name;
+//   }
+//   set name(newName) {
+//     this._name = newName;
+//   }
+//   gainXp(amount) {
+//     console.log(`${this.name} получил ${amount} опыта`);
+//     this.xp += amount;
+//   }
+// }
+// // делаем класс, который расширяет класс Hero:
+// class Warrior extends Hero {
+//   //extends делает вот так: Warrior.prototype.__proto__ === Hero.prototype
+//   constructor(name, xp, weapon) {
+//     super(name, xp);
+//     this._weapon = weapon;
+//   }
+//   attack() {
+//     console.log(`${this._name} атакует используя ${this._weapon}`); // name надо взять от Hero, для этого используем наследование extends Hero
+//   }
+// }
+// // const mango = new Hero('Mango', 1000);
+// const mango = new Warrior('Mango', 1000, 'Sword');
+// console.log(mango); // Hero {_name: "Mango", _xp: 1000}
+// mango.attack(); // Mango атакует используя Sword
+// mango.gainXp(2000);
+// class Paladin extends Warrior {
+//   constructor(name, xp, weapon, spell) {
+//     super(name, xp, weapon);
+//     this.spell = spell;
+//   }
+//   cast() {
+//     console.log(`${this.name} бросает ${this.spell}`);
+//   }
+// }
+// const poly = new Paladin('Poly', 800, 'Axe', 'Heal');
+// console.log(poly); // Paladin {_name: "Poly", _xp: 800, _weapon: "Sword", spell: "Healing"}
+// poly.attack();
+// poly.gainXp(400);
+// poly.cast();
+
+// // прпиватное свойство
+// class User {
+//   // Необязательное объявление публичных свойств
+//   name;
+//   // Обязательное объявление приватных свойств
+//   #email;
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.#email = email;
+//   }
+//   getEmail() {
+//     return this.#email;
+//   }
+//   changeEmail(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+// const mango = new User({ name: 'Манго', email: 'mango@mail.com' });
+// mango.changeEmail('mango@supermail.com');
+// console.log(mango.getEmail()); // mango@supermail.com
+// console.log(mango.#email); // Будет ошибка, это приватное свойство
+
