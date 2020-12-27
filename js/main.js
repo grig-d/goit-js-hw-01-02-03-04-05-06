@@ -1197,7 +1197,7 @@
 // poly.gainXp(400);
 // poly.cast();
 
-// // прпиватное свойство
+// // приватное свойство
 // class User {
 //   // Необязательное объявление публичных свойств
 //   name;
@@ -1218,4 +1218,84 @@
 // mango.changeEmail('mango@supermail.com');
 // console.log(mango.getEmail()); // mango@supermail.com
 // console.log(mango.#email); // Будет ошибка, это приватное свойство
+
+// // геттер и сеттер ещё раз
+// class User {
+//   name;
+//   #email;
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.#email = email;
+//   }
+//   // Геттер email
+//   get email() {
+//     return this.#email;
+//   }
+//   // Сеттер email
+//   set email(newEmail) {
+//     if (newEmail === '') {
+//       console.log('Ошибка! Почта не может быть пустой строкой!');
+//       return;
+//     }
+//     this.#email = newEmail;
+//   }
+// }
+// const mango = new User({ name: 'Манго', email: 'mango@mail.com' });
+// console.log(mango.email); // mango@mail.com
+// mango.email = 'mango@supermail.com';
+// console.log(mango.email); // mango@supermail.com
+
+// // статическое свойство
+// class User {
+//   // Объявление и инициализация статического свойства
+//   static TYPES = {
+//     ADMIN: 'admin',
+//     EDITOR: 'editor',
+//   };
+//   #email;
+//   #type;
+//   constructor({ email, type }) {
+//     this.#email = email;
+//     this.#type = type;
+//   }
+//   get type() {
+//     return this.#type;
+//   }
+//   set type(newType) {
+//     if (newType === undefined) {
+//       console.log('Ошибка! Такого типа пользователя не существет');
+//       return;
+//     }
+//     this.#type = newType;
+//   }
+// }
+// const mango = new User({
+//   email: 'mango@mail.com',
+//   type: User.TYPES.ADMIN,
+// });
+// console.log(mango.TYPES); // undefined
+// console.log(User.TYPES); // { ADMIN: 'admin', EDITOR: 'editor' }
+// console.log(mango.type); // admin
+// mango.type = User.TYPES.EDITOR;
+// console.log(mango.type); // editor
+
+// // Статические методы
+// class User {
+//   static #takenEmails = [];
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+//   #email;
+//   constructor({ email }) {
+//     this.#email = email;
+//     User.#takenEmails.push(email);
+//   }
+// }
+// const mango = new User({ email: 'mango@mail.com' });
+// console.log(
+//   User.isEmailTaken('poly@mail.com')
+// ); // false
+// console.log(
+//   User.isEmailTaken('mango@mail.com')
+// ); // true
 

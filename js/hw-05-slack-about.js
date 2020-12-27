@@ -75,7 +75,6 @@ Yevhenii Ivanov:bulb:  18 days ago
 :thinking_face:
 1
 
-
 Yevhenii Ivanov:bulb:  18 days ago
 Проверь
 
@@ -83,7 +82,6 @@ Olga Konopleva  18 days ago
 в конструкторе price, а геттере и сеттере _price
 :raised_hands:
 1
-
 
 Nastya Boiko:face_with_raised_eyebrow:  18 days ago
 по условию так написано :white_frowning_face:
