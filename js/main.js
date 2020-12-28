@@ -1299,3 +1299,13 @@
 //   User.isEmailTaken('mango@mail.com')
 // ); // true
 
+// стрелочные функции:
+// // обычная ф-я
+// const numbers = [1, 5, 2, 4, 3];
+// const greaterThenTwo = numbers.filter(function (num) { return num > 2; });
+// console.log(greaterThenTwo);
+// // рефакторинг стрелка
+// const numbersR = [1, 5, 2, 4, 3];
+// const greaterThenTwoR = numbersR.filter(num => num > 2);
+// console.log(greaterThenTwoR);
+
