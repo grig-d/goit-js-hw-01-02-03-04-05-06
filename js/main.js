@@ -575,6 +575,19 @@
 
 // MODULE 4
 
+// // callback
+// function greet(name) {
+//   consle.log(`Добро пожаловать ${name}.`);
+// }
+// // higher order function
+// function registerGuest(name, callback) {
+//   console.log(`Регистрируем гостя ${name}.`);
+//   callback(name);
+// }
+// registerGuest('Манго', greet);
+// // Мы передали ссылку на функцию greet как аргумент,
+// // поэтому она будет присвоена в параметр callback и вызвана внутри функции registerGuest через круглые скобки
+
 // callback
 // const greet = function (name) {
 //   console.log(`Hello ${name}`);
@@ -606,6 +619,16 @@
 //   callback(string);
 // };
 // higherOrderFunction(printMessage);
+
+// // Передаём инлайн функцию greet как колбэк
+// registerGuest('Манго', function greet(name) {
+//   consle.log(`Добро пожаловать ${name}.`);
+// });
+
+// // Передаём инлайн функцию notify как колбэк
+// registerGuest('Поли', function notify(name) {
+//   consle.log(`Уважаемый(ая) ${name}, ваш номер будет готов через 30 минут.`);
+// });
 
 // // переменной adder присваивается описание функции и затем её можно использовать как функцию
 // let val = 7;
@@ -1308,4 +1331,3 @@
 // const numbersR = [1, 5, 2, 4, 3];
 // const greaterThenTwoR = numbersR.filter(num => num > 2);
 // console.log(greaterThenTwoR);
-
