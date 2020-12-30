@@ -32,3 +32,53 @@
 // // Пицца Ультрасыр готовится, ожидайте...
 // // Едим пиццу Ультрасыр.
 
+// // 4
+// const pizzaPalace = {
+//   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//   order(pizzaName, onSuccess, onError) {
+//     if (this.pizzas.includes(pizzaName)) {
+//       return onSuccess(pizzaName);
+//     }
+//       return onError(pizzaName);
+//   },
+// };
+// // Пиши код выше этой строки
+// // Колбэк для onSuccess
+// function makePizza(pizzaName) {
+//   return `Ваш заказ принят. Готовим пиццу ${pizzaName}.`;
+// }
+// // Колбэк для onError
+// function onOrderError(error) {
+//   return `Ошибка! В ассортименте нет пиццы с названием ${error}.`;
+// }
+// // Вызовы метода с колбэками
+// pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
+// pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
+// pizzaPalace.order('Биг майк', makePizza, onOrderError);
+// pizzaPalace.order('Венская', makePizza, onOrderError);
+// console.log(pizzaPalace.order('Аль Копчино', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Четыре нарезона', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Биг майк', makePizza, onOrderError));
+// console.log(pizzaPalace.order('Венская', makePizza, onOrderError));
+
+// // 5
+// const pizzaPalace = {
+//   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//   // Пиши код ниже этой строки
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+//     if (!isPizzaAvailable) {
+//       return `В ассортименте нет пиццы с названием «${pizzaName}».`;
+//     }
+//     return `Заказ принят, готовим пиццу «${pizzaName}».`;
+//   },
+//   // Пиши код выше этой строки
+// };
+// console.log(pizzaPalace.order('Аль Копчино')); // Заказ принят, готовим пиццу «Аль Копчино».
+// console.log(pizzaPalace.order('Четыре нарезона')); // Заказ принят, готовим пиццу «Четыре нарезона».
+// console.log(pizzaPalace.order('Биг майк')); // В ассортименте нет пиццы с названием «Биг майк».
+// console.log(pizzaPalace.order('Венская')); // В ассортименте нет пиццы с названием «Венская».
+
