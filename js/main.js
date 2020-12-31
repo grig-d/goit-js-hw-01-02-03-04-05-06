@@ -869,6 +869,15 @@
 // showTag.call(mango);
 // showTag.call(poly);
 
+// // call
+// function greetGuest(greeting) {
+//   console.log(`${greeting}, ${this.username}.`);
+// }
+// const mango = { username: 'Манго' };
+// const poly = { username: 'Поли' };
+// greetGuest.call(mango, 'Добро пожаловать'); // Добро пожаловать, Манго.
+// greetGuest.call(poly, 'С приездом'); // С приездом, Поли.
+
 // // bind (привязка контекста)
 // const showTag = function () {
 //   console.log('this: ', this);
@@ -1356,3 +1365,4 @@
 // const numbersR = [1, 5, 2, 4, 3];
 // const greaterThenTwoR = numbersR.filter(num => num > 2);
 // console.log(greaterThenTwoR);
+
