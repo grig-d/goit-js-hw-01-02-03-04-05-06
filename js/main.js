@@ -645,12 +645,12 @@
 // };
 // higherOrderFunction(printMessage);
 
-// // Передаём инлайн функцию greet как колбэк
+// // Передаём инлайн функцию greet как колбек
 // registerGuest('Манго', function greet(name) {
 //   consle.log(`Добро пожаловать ${name}.`);
 // });
 
-// // Передаём инлайн функцию notify как колбэк
+// // Передаём инлайн функцию notify как колбек
 // registerGuest('Поли', function notify(name) {
 //   consle.log(`Уважаемый(ая) ${name}, ваш номер будет готов через 30 минут.`);
 // });
@@ -1400,6 +1400,25 @@
 // });
 // console.log(updatedPlayers);
 
+// // map под капотом своими руками
+// const numbers = [5, 10, 15, 20, 25];
+// // создает и возвращает новый массив
+// // перебирает оригинальный массив
+// // вызывает колбек для каждого элемента
+// // записывает результат вызова функции в новый массив
+// const map = function (array, callback) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     const result = callback(array[i], i, array);
+//     newArray.push(result);
+//   }
+//   return newArray;
+// };
+// const doubledNumbers = map(numbers, function (number, index, array) {
+//   return number * 2;
+// });
+// console.log(doubledNumbers);
+
 // // filter
 // const numbers = [5, 10, 15, 20, 25];
 // const filteredNumbers = numbers.filter(number => {
@@ -1468,4 +1487,4 @@
 // const averagedInPlayTime = players.every(player => { return player.timePlayed > 100; });
 // console.log(averagedInPlayTime);
 
-56-00
+// 1-06
