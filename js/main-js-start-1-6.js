@@ -1447,6 +1447,26 @@
 // });
 // console.log(hardcorePlayers);
 
+// // filter под капотом своими руками
+// // создает новый массив и возвращает его
+// // колбек для каждого элемента
+// // если колбек вернет true пушит элемент в новый массив
+// const filter = function (array, callback) {
+//   const newArray = [];
+//     for (let i = 0; i < array.length; i += 1) {
+//         const passed = callback(array[i], i, array);
+//         if (passed) {
+//             newArray.push(array[i]);
+//         }
+//   }
+//   return newArray;
+// };
+// const numbers = [5, 10, 15, 20, 25];
+// const filteredNumbers = filter(numbers, function (number, index, array) {
+//     return number > 15;
+// });
+// console.log(filteredNumbers);
+
 // // find
 // const numbers = [5, 10, 15, 20, 25];
 // const number = numbers.find(n => {
@@ -1487,4 +1507,22 @@
 // const averagedInPlayTime = players.every(player => { return player.timePlayed > 100; });
 // console.log(averagedInPlayTime);
 
-// 1-06
+// // reduce
+// const numbers = [5, 10, 15, 20, 25];
+// const total = numbers.reduce(function (accumulator, number) {
+//   return accumulator + number;
+// }, 0);
+// console.log(total);
+
+// reduce пример
+// общая зарплата
+const salary = {
+    mango: 100,
+    poly: 50,
+    ajax: 150,
+};
+// reduce можно вызывать только на массиве, поэтому собираем значения объекта с массив
+const values = Object.values(salary);
+// console.log(values); // [100, 50, 150]
+const totalSalary = values.reduce((accu, value) => accu + value);
+console.log(totalSalary);
