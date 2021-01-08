@@ -1514,15 +1514,52 @@
 // }, 0);
 // console.log(total);
 
-// reduce пример
-// общая зарплата
-const salary = {
-    mango: 100,
-    poly: 50,
-    ajax: 150,
-};
-// reduce можно вызывать только на массиве, поэтому собираем значения объекта с массив
-const values = Object.values(salary);
-// console.log(values); // [100, 50, 150]
-const totalSalary = values.reduce((accu, value) => accu + value);
-console.log(totalSalary);
+// // reduce пример
+// // общая зарплата
+// const salary = {
+//     mango: 100,
+//     poly: 50,
+//     ajax: 150,
+// };
+// // reduce можно вызывать только на массиве, поэтому собираем значения объекта с массив
+// const values = Object.values(salary);
+// // console.log(values); // [100, 50, 150]
+// const totalSalary = values.reduce((accu, value) => accu + value);
+// console.log(totalSalary); // 300
+
+// // reduce предыдущий пример + чейнинг
+// // общая зарплата
+// const salary = {
+//     mango: 100,
+//     poly: 50,
+//     ajax: 150,
+// };
+// // чейнинг
+// const totalSalary = Object.values(salary).reduce((accu, value) => accu + value);
+// console.log(totalSalary); // 300
+
+// // reduce считаем общее кол-во часов
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+// ];
+// const totalTimePlayed = players.reduce((time, player) => {
+//   return time + player.timePlayed;
+// }, 0);
+// console.log(totalTimePlayed); // 1240
+
+// // reduce считаем общую сумму товаров в корзине
+// const cart = [
+//   { label: 'Apples', price: 100, quantity: 2 },
+//   { label: 'Bananas', price: 120, quantity: 3 },
+//   { label: 'Lemons', price: 70, quantity: 4 },
+// ];
+// const totalAmount = cart.reduce((total, item) => {
+//   return total + item.price * item.quantity;
+// }, 0);
+// console.log(totalAmount); // 840
+
+
