@@ -734,6 +734,20 @@
 // });
 // console.log(labels); // ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5"]
 
+// // callback + bind
+// const customer = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   },
+// };
+// function makeMessage(callback) {
+//   // callback() это вызов метода getFullName без объекта
+//   console.log(`Обрабатываем заявку от ${callback()}.`);
+// }
+// makeMessage(customer.getFullName.bind(customer)); // колбеком передаем копию метода getFullName с привязанным контекстом к объекту customer
+
 // // фильтрация массива
 // const filter = function (array, test) {
 //   //test is callback
@@ -952,6 +966,17 @@
 // };
 // // Передаем копию метода showThis с контекстом привязанным к hotel
 // fn(hotel.showThis.bind(hotel)); // {name: "Resort Hotel", showThis: ƒ}
+
+// // bind
+// function greet(clientName) {
+//   return `${clientName}, добро пожаловать в «${this.service}».`;
+// }
+// const steam = { service: 'Steam' };
+// const steamGreeter = greet.bind(steam);
+// steamGreeter('Манго'); // "Манго, добро пожаловать в «Steam»."
+// const gmail = { service: 'Gmail' };
+// const gmailGreeter = greet.bind(gmail);
+// gmailGreeter('Поли'); // "Поли, добро пожаловать в «Gmail»."
 
 // ООП
 
@@ -1587,5 +1612,31 @@
 // }, {});
 // console.log(tagsStatsClean);
 
-// 32-16
+// // sort
+// const numbers = [1, 9, 6, 2, 3];
+// console.log(numbers);
+// numbers.sort((prev, next) => {
+//   return prev - next;
+// });
+// // return prev - next // по возвростанию
+// // return next - prev // по убыванию
+// console.log(numbers);
 
+// // sort сортировка массива объектов по значению свойства
+// const players = [
+//   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+//   { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+//   { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+//   { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+//   { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+// ];
+// const badPlayers = [...players].sort((prevPlayer, nextPlayer) => {
+//   return prevPlayer.timePlayed - nextPlayer.timePlayed; // по возвростанию
+// });
+// console.log(badPlayers);
+// const topPlayers = [...players].sort((prevPlayer, nextPlayer) => {
+//   return nextPlayer.timePlayed - prevPlayer.timePlayed; // по убыванию
+// });
+// console.log(topPlayers);
+
+// chaining

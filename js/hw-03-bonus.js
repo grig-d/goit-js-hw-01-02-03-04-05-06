@@ -364,3 +364,5 @@
 // atTheOldToad.removePotion('Дыхание дракона');
 // atTheOldToad.updatePotionName('Каменная кожа', 'Зелье неуязвимости');
 // console.log(atTheOldToad.getPotions());
+
+// DONE

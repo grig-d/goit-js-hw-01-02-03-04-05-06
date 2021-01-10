@@ -1,4 +1,5 @@
 // https://homework-js-autocheck.goit.ua/?token=e67afab47edc86c16faa101e36f4bbc165f5f19c4634c61fe67897feba9b9227&block=cdefghi42
+
 // // 33
 // function formatMessage(message, maxLength) {
 //   let result;
@@ -24,3 +25,5 @@
 //   return result;
 // }
 // console.log(checkForSpam('jhsgfSpammds'));
+
+// DONE
