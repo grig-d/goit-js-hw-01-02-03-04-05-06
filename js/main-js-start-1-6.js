@@ -1562,4 +1562,30 @@
 // }, 0);
 // console.log(totalAmount); // 840
 
+// // reduce собираем все теги
+// const tweets = [
+//   { id: '001', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '002', likes: 2, tags: ['html', 'css'] },
+//   { id: '003', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '004', likes: 8, tags: ['css', 'react'] },
+//   { id: '005', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+// const allTags = tweets.reduce((tags, tweet) => {
+//   tags.push(...tweet.tags);
+//   return tags;
+// }, []);
+// console.log(allTags); // ["js", "nodejs", "html", "css", "html", "js", "nodejs", "css", "react", "js", "nodejs", "react"]
+// // reduce статистика тегов из массива allTags грязная функция мутирует acc
+// const tagsStatsDirty = allTags.reduce((accu, tag) => {
+//   accu[tag] = accu.hasOwnProperty(tag) ? accu[tag] + 1 : 1;
+//   return accu;
+// }, {});
+// console.log(tagsStatsDirty);
+// // reduce статистика тегов из массива allTags чистая функция
+// const tagsStatsClean = allTags.reduce((accu, tag) => {
+//   return { ...accu, [tag]: accu.hasOwnProperty(tag) ? accu[tag] + 1 : 1 };
+// }, {});
+// console.log(tagsStatsClean);
+
+// 32-16
 
