@@ -1672,3 +1672,13 @@
 //   .sort((prevPlayer, nextPlayer) => nextPlayer.rank - prevPlayer.rank);
 // console.table(onlineSorted);
 
+// Деструктурирующее присваивание ДП
+// 1. Объект как параметр без ДП
+const object = {num : 2}
+function getNum (obj) { return obj.num; }
+console.log(getNum(object)) // 2
+// // 2. ДП
+// const object = {num : 2}
+// // const num  =  object.num;
+// const { num } = object;
+// console.log(num) // 2
