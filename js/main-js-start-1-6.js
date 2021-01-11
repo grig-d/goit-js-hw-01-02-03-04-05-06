@@ -1559,7 +1559,7 @@
 //     poly: 50,
 //     ajax: 150,
 // };
-// // чейнинг
+// // chaining
 // const totalSalary = Object.values(salary).reduce((accu, value) => accu + value);
 // console.log(totalSalary); // 300
 
@@ -1639,4 +1639,36 @@
 // });
 // console.log(topPlayers);
 
-// chaining
+// // without chaining
+// const numbers = [1, 5, 2, 4, 3];
+// const greaterThenTwo = numbers.filter(number => {
+//   return number > 2;
+// });
+// console.log(greaterThenTwo);
+// const multByTwo = greaterThenTwo.map(number => {
+//   return number * 2;
+// });
+// console.log(multByTwo);
+// const sorted = multByTwo.sort((a, b) => {
+//   return a - b;
+// });
+// console.log(sorted);
+// // chaining
+// const chaining = numbers
+//   .filter(number => number > 2)
+//   .map(number => number * 2)
+//   .sort((a, b) => b - a);
+// console.log(chaining);
+
+// // chaining сортируем игроков онлайн
+// const players = [
+//   { id: 'id-1', tag: 'Mango', isOnline: true, rank: 800 },
+//   { id: 'id-2', tag: 'Poly', isOnline: false, rank: 600 },
+//   { id: 'id-3', tag: 'Ajax', isOnline: true, rank: 100 },
+//   { id: 'id-4', tag: 'Kiwi', isOnline: true, rank: 400 },
+// ];
+// const onlineSorted = players
+//   .filter(player => player.isOnline)
+//   .sort((prevPlayer, nextPlayer) => nextPlayer.rank - prevPlayer.rank);
+// console.table(onlineSorted);
+
