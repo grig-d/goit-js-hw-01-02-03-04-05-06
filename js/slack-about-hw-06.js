@@ -175,17 +175,9 @@ Yevhenii Ivanov:bulb:  12 days ago
 
 MarinaKryuchko Dec 13th at 12:01 PM
 Ребята, подскажите в чем ошибка?
-задача6-3.jpg 
-задача6-3.jpg
-
-
-17 replies
 
 Maksim Dema  14 days ago
 в filter неправильно записана деструктуризация
-
-
-
 
 MarinaKryuchko  14 days ago
 именно это я и не могу понять! у меня  фильтрация возвращает пустой массив, как бы я его не изменяла...
@@ -237,10 +229,6 @@ MarinaKryuchko  14 days ago
 вух, спасибо, ребята! ))
 */
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/* 5
-написал ({email}) => email === mail и заработало
-*/
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /*
 6
 Alexander Serzhenko  14 days ago
@@ -278,7 +266,6 @@ map перебирает исходный массив, и тебе нужно, 
 :heavy_plus_sign:
 2
 
-
 Olga Konopleva  14 days ago
 в самой задачке есть подсказка https://prnt.sc/w1nsjc
 LightshotLightshot
@@ -287,7 +274,6 @@ Captured with Lightshot (33 kB)
 https://image.prntscr.com/image/4hF53sccSo_oOuiueVh4Rg.png
 :heavy_plus_sign:
 2
-
 
 Olga Konopleva  14 days ago
 И в итоге в консоле должен получится массив с 3 объектами,
@@ -305,7 +291,6 @@ Maxim Right:squirrel:  14 days ago
 И в твоем случае не забудь убрать фигурные скобочки в теле функции фильтра :raised_hands:
 :heavy_plus_sign:
 2
-
 
 Zinaida  14 days ago
 @Olga Konopleva @Maxim Right
@@ -333,7 +318,6 @@ MarinaKryuchko  13 days ago
 :raised_hands::skin-tone-2:
 1
 
-
 Alexander Serzhenko  13 days ago
 Хм. Интересненько в return всунуть новый массив без объявления. Надо запомнить.
 */
@@ -341,9 +325,6 @@ Alexander Serzhenko  13 days ago
 /*
 9
 Чтото не вяжеться у меня с деструктуризацией. Тут ведь уже name деструктурировано....что не так?)
-6-9.jpg 
-6-9.jpg
-
 13 replies
 
 Ivetta Dashkova:nerd_face:  16 days ago

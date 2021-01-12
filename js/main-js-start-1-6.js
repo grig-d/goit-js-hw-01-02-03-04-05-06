@@ -1673,12 +1673,31 @@
 // console.table(onlineSorted);
 
 // Деструктурирующее присваивание ДП
-// 1. Объект как параметр без ДП
-const object = {num : 2}
-function getNum (obj) { return obj.num; }
-console.log(getNum(object)) // 2
+// // 1. Объект как параметр без ДП
+// const object = {num : 2}
+// function getNum (obj) { return obj.num; }
+// console.log(getNum(object)) // 2
 // // 2. ДП
 // const object = {num : 2}
 // // const num  =  object.num;
 // const { num } = object;
 // console.log(num) // 2
+// 3. Объект как параметр c ДП
+// const object = {num : 2}
+// //function getNum (obj) { return obj.num; }
+// function getNum ({num}) { return num; }
+// console.log(getNum(object)) // 2
+
+// // Деструктурирующее присваивание ДП
+// const person = {
+//   name: 'Eddie',
+//   age: 24,
+// };
+// function introduce({ name, age }) {
+//     return (`I'm ${name} and I'm ${age} years old!`);
+// }
+// console.log(introduce(person));
+
+// // Создание анонимных объектов:
+// const arr = Array(3).fill('').map((e, i) => ({ ['index']: i }));
+// console.log(arr);
