@@ -1701,3 +1701,51 @@
 // // Создание анонимных объектов:
 // const arr = Array(3).fill('').map((e, i) => ({ ['index']: i }));
 // console.log(arr);
+
+// QnA
+
+// // timer
+// const arr = new Array(100);
+// console.time('map');
+// arr.map(el => el);
+// console.timeEnd('map');
+
+// Шаг 1
+// // Object.entries()
+// const options = {
+//     yellow: true,
+//     blue: false,
+//     teal: false,
+//     orange: true,
+//     rosered: true,
+//     violet: false,
+// };
+// const entries = Object.entries(options);
+// console.log(entries);
+// // фильтруем только те цвета которые true
+// const selectedOptions = entries.filter(entry => { return entry[1] });
+// console.log(selectedOptions);
+// // получаем массив выбранных цветов
+// const colors = selectedOptions.map(option => option[0]);
+// console.log(colors);
+
+// Шаг 2
+// // рефакторинг предыдущего кода в чейнинг
+// const options = {
+//   yellow: true,
+//   blue: false,
+//   teal: false,
+//   orange: true,
+//   rosered: true,
+//   violet: false,
+// };
+// const colors = Object.entries(options)
+//   .filter(entry => {
+//     return entry[1];
+//   })
+//   .map(option => option[0]);
+// console.log(colors);
+
+// Шаг 3
+// деструктуризация массива
+// 16-00
