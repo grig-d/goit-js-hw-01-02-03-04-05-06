@@ -1748,4 +1748,15 @@
 
 // Шаг 3
 // деструктуризация массива
-// 16-00
+const options = {
+  yellow: true,
+  blue: false,
+  teal: false,
+  orange: true,
+  rosered: true,
+  violet: false,
+};
+const colors = Object.entries(options)
+  .filter(([, selected]) => selected)
+  .map(([color]) => color);
+console.log(colors);
