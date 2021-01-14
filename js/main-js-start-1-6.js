@@ -1781,21 +1781,19 @@
 //   .map(option => option[0]);
 // console.log(colors);
 
-// Шаг 3
-// деструктуризация массива
-<<<<<<< Updated upstream
-const options = {
-  yellow: true,
-  blue: false,
-  teal: false,
-  orange: true,
-  rosered: true,
-  violet: false,
-};
-const colors = Object.entries(options)
-  .filter(([, selected]) => selected)
-  .map(([color]) => color);
-console.log(colors);
-=======
-// 16-00
->>>>>>> Stashed changes
+// // Шаг 3
+// // деструктуризация массива
+// const options = {
+//   yellow: true,
+//   blue: false,
+//   teal: false,
+//   orange: true,
+//   rosered: true,
+//   violet: false,
+// };
+// const colors = Object.entries(options)
+//   .filter(([, selected]) => selected)
+//   .map(([color]) => color);
+// console.log(colors);
+
+// 55-23
