@@ -1639,6 +1639,16 @@
 // });
 // console.log(topPlayers);
 
+// // sort
+// const users = [
+//   { name: 'Mango', daysActive: 15 },
+//   { name: 'Poly', daysActive: 4 },
+//   { name: 'Ajax', daysActive: 27 },
+//   { name: 'Chelsey', daysActive: 2 },
+// ];
+// const sortByActiveDays = (a, b) => a.daysActive - b.daysActive;
+// console.log(users.sort(sortByActiveDays));
+
 // // without chaining
 // const numbers = [1, 5, 2, 4, 3];
 // const greaterThenTwo = numbers.filter(number => {
@@ -1698,6 +1708,31 @@
 // }
 // console.log(introduce(person));
 
+// // Деструктурирующее присваивание ДП
+// const users = [
+//   { id: '000', name: 'Mango', isActive: true },
+//   { id: '001', name: 'Poly', isActive: false },
+//   { id: '002', name: 'Ajax', isActive: true },
+//   { id: '003', name: 'Chelsey', isActive: false },
+// ];
+// // Создадим функцию которая будет возвращать нам пользователя по id
+// const getUserById = (arr, id) => arr.find(x => x.id === id);
+// console.log(getUserById(users, '001'));
+// console.log(getUserById(users, '003'));
+
+// // Деструктурирующее присваивание ДП
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+// // Напишем функцию для подсчета лайков из коллекции
+// const countLikes = tweets =>
+//   tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+// console.log(countLikes(tweets)); // 32
+
 // // Создание анонимных объектов:
 // const arr = Array(3).fill('').map((e, i) => ({ ['index']: i }));
 // console.log(arr);
@@ -1748,6 +1783,7 @@
 
 // Шаг 3
 // деструктуризация массива
+<<<<<<< Updated upstream
 const options = {
   yellow: true,
   blue: false,
@@ -1760,3 +1796,6 @@ const colors = Object.entries(options)
   .filter(([, selected]) => selected)
   .map(([color]) => color);
 console.log(colors);
+=======
+// 16-00
+>>>>>>> Stashed changes
