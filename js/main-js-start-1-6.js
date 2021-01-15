@@ -1795,5 +1795,3 @@
 //   .filter(([, selected]) => selected)
 //   .map(([color]) => color);
 // console.log(colors);
-
-// 55-23
