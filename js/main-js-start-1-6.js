@@ -1391,6 +1391,15 @@
 // const greaterThenTwoR = numbersR.filter(num => num > 2);
 // console.log(greaterThenTwoR);
 
+// // Обычное объявление функции:
+// function classicAdd(a, b, c) {
+//   return a + b + c;
+// }
+// // Стрелочная функция:
+// const arrowAdd = (a, b, c) => {
+//   return a + b + c;
+// };
+
 // // map
 // const players = [
 //   { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
