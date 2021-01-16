@@ -1,3 +1,4 @@
+import users from './hw-06-users.js';
 // https://homework-js-autocheck.goit.ua/?token=e67afab47edc86c16faa101e36f4bbc165f5f19c4634c61fe67897feba9b9227&block=op6789290
 
 // // Задача 1
@@ -190,6 +191,269 @@
 //     const genres = books.flatMap(book => book.genres);
 //   console.log(genres); // [ 'приключения', 'историческое', 'фантастика', 'ужасы', 'мистика' ]
 
-// Задача 13
-// Имена пользователей
+// // Задача 13
+// // Имена пользователей
+// const getUserNames = users => {
+//   return users.map(user => user.name);
+// };
+// console.log(getUserNames(users));
+// // ['Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony']
 
+// // Задача 14
+// // Почты пользователей
+// const getUserEmails = users => {
+//   return users.map(user => user.email);
+// };
+// console.log(getUserEmails(users));
+// // ['moorehensley@indexia.com', 'sharlenebush@tubesys.com', 'rossvazquez@xinware.com', 'elmahead@omatom.com', 'careybarr@nurali.com', 'blackburndotson@furnigeer.com', 'shereeanthony@kog.com']
+
+// // Задача 16
+// // фильтрация уникальных элементов
+// const books = [
+//   {
+//     title: 'Последнее королевство',
+//     author: 'Бернард Корнуэлл',
+//     genres: ['приключения', 'историческое'],
+//   },
+//   {
+//     title: 'На берегу спокойных вод',
+//     author: 'Роберт Шекли',
+//     genres: ['фантастика', 'мистика'],
+//   },
+//   {
+//     title: 'Красна как кровь',
+//     author: 'Ли Танит',
+//     genres: ['ужасы', 'мистика', 'приключения'],
+//   },
+// ];
+// // Пиши код ниже этой строки
+// const allGenres = books.flatMap(book => book.genres);
+// const uniqueGenres = allGenres.filter(
+//   (element, index, array) => array.indexOf(element) === index,
+// );
+// console.log(allGenres); // ['приключения', 'историческое', 'фантастика', 'мистика', 'ужасы', 'мистика', 'приключения']
+// console.log(uniqueGenres); // ['приключения', 'историческое', 'фантастика', 'мистика', 'ужасы']
+
+// // Задача 17
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 },
+// ];
+// const MIN_RATING = 8;
+// const AUTHOR = 'Бернард Корнуэлл';
+// // Пиши код ниже этой строки
+// const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+// const booksByAuthor = books.filter(book => book.author === AUTHOR);
+// console.log(topRatedBooks);
+// console.log(booksByAuthor);
+
+// // Задача 18
+// // Пользователи с цветом глаз
+// const getUsersWithEyeColor = (users, color) => {return users.filter(user => user.eyeColor === color);};
+// console.log(getUsersWithEyeColor(users, 'blue'));
+// console.log(getUsersWithEyeColor(users, 'green'));
+// console.log(getUsersWithEyeColor(users, 'brown'));
+
+// // Задача 19
+// // Пользователи в возрастной категории
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//   return users.filter(user => user.age > minAge && user.age < maxAge);
+// };
+// console.log(getUsersWithAge(users, 20, 30));
+// console.log(getUsersWithAge(users, 30, 40));
+// console.log(getUsersWithAge(users, 80, 100));
+
+// // Задача 20
+// // Пользователи с другом
+// const getUsersWithFriend = (users, friendName) => {
+//   return users.filter(user => user.friends.includes(friendName));
+// };
+
+// // Задача 21
+// // Список друзей
+// const getFriends = users => {
+//   return users
+//     .flatMap(user => user.friends)
+//     .filter((element, index, array) => array.indexOf(element) === index);
+// };
+// console.log(getFriends(users));
+// // ['Sharron Pace', 'Briana Decker', 'Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner', 'Goldie Gentry', 'Aisha Tran', 'Jordan Sampson', 'Eddie Strong', 'Jacklyn Lucas', 'Linda Chapman']
+
+// // Задача 22
+// // Активные пользователи
+// const getActiveUsers = users => {
+//   return users.filter(user => user.isActive);
+// };
+
+// // Задача 25
+// // Пользователь с почтой
+// const getUserWithEmail = (users, email) => {
+//   return users.find(user => user.email === email);
+// };
+
+// // Задача 26
+// // every()
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Пиши код ниже этой строки
+// const eachElementInFirstIsEven = firstArray.every(element => element % 2 === 0);
+// const eachElementInFirstIsOdd = firstArray.every(element => element % 2 !== 0);
+// const eachElementInSecondIsEven = secondArray.every(
+//   element => element % 2 === 0,
+// );
+// const eachElementInSecondIsOdd = secondArray.every(
+//   element => element % 2 !== 0,
+// );
+// const eachElementInThirdIsEven = thirdArray.every(element => element % 2 === 0);
+// const eachElementInThirdIsOdd = thirdArray.every(element => element % 2 !== 0);
+// console.log(eachElementInFirstIsEven);
+// console.log(eachElementInFirstIsOdd);
+// console.log(eachElementInSecondIsEven);
+// console.log(eachElementInSecondIsOdd);
+// console.log(eachElementInThirdIsEven);
+// console.log(eachElementInThirdIsOdd);
+
+// // Задача 27
+// // Все ли пользователи активны
+// const isEveryUserActive = users => {
+//   return users.every(user => user.isActive);
+// };
+// console.log(isEveryUserActive(users));
+
+// // Задача 29
+// // Есть ли активные пользователи
+// const isAnyUserActive = users => {
+//   return users.some(user => user.isActive);
+// };
+// console.log(isAnyUserActive(users));
+
+// // Задача 31
+// const players = [
+//   { name: 'Манго', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Поли', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Аякс', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Киви', playtime: 241, gamesPlayed: 1 },
+// ];
+// // Пиши код ниже этой строки
+// const totalAveragePlaytimePerGame = players.reduce((acc, player) => acc += player.playtime / player.gamesPlayed, 0);
+// console.log(totalAveragePlaytimePerGame); // 1023
+
+// // Задача 32
+// // Общий баланс пользователей
+// const calculateTotalBalance = users => {
+//   return users.reduce((accu, user) => accu += user.balance, 0);
+// };
+// console.log(calculateTotalBalance(users)); // 20916
+
+// // Задача 33
+// // Общее количество друзей
+// const getTotalFriendCount = users => {
+//   return users.reduce((accu, user) => (accu += user.friends.length), 0);
+// };
+// console.log(getTotalFriendCount(users)); // 14
+
+// // Задача 36
+// // localeCompare()
+// const authors = [
+//   'Ли Танит',
+//   'Бернард Корнуэлл',
+//   'Роберт Шекли',
+//   'Федор Достоевский',
+//   'Говард Лавкрафт',
+// ];
+// // Пиши код ниже этой строки
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+
+// // Задача 37
+// // Сортировка книг по автору
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 },
+// ];
+// // Пиши код ниже этой строки
+// const sortedByAuthorName = [...books].sort((a, b) => a.author.localeCompare(b.author));
+// const sortedByReversedAuthorName = [...books].sort((a, b) =>
+//   b.author.localeCompare(a.author),
+// );
+// const sortedByAscendingRating = [...books].sort((a, b) => a.rating - b.rating);
+// const sortedByDescentingRating = [...books].sort((a, b) => b.rating - a.rating);
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
+
+// // Задача 38
+// // Сортировка по балансу
+// const sortByAscendingBalance = users => {
+//   return users.sort((userA, userB) => userA.balance - userB.balance);
+// };
+
+// // Задача 39
+// // Сортировка по количеству друзей
+// const sortByDescendingFriendCount = users => {
+//   return [...users].sort(
+//     (userA, userB) => userB.friends.length - userA.friends.length,
+//   );
+// };
+
+// // Задача 40
+// // Сортировка по имени
+// const sortByName = users => {
+//   return [...users].sort((userA, userB) => (userA.name).localeCompare(userB.name));
+// };
+// console.log(sortByName(users));
+
+// // Задача 41
+// // массив имён авторов в алфавитном порядке, рейтинг книг которых больше значения переменной MIN_BOOK_RATING
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+//   { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Пиши код ниже этой строки
+// const names = [...books]
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(book => book.author)
+//   .sort((authorA, authorB) => authorA.localeCompare(authorB));
+// console.log(names);
+
+// // Задача 42
+// // массив имён пользователей отсортированный по возрастанию количества их друзей
+// const getNamesSortedByFriendCount = users => {
+//     return [...users].sort(
+//       (userA, userB) => userA.friends.length - userB.friends.length,
+//     ).map(user => user.name)
+// };
+// console.log(getNamesSortedByFriendCount(users));
+
+// // Задача 43
+// // Имена друзей
+// // массив уникальных имён друзей (свойство friends) отсортированный по алфавиту
+// const getSortedFriends = users => {
+//     return [...users]
+//       .flatMap(user => user.friends)
+//       .filter((friend, index, array) => array.indexOf(friend) === index)
+//       .sort((friendA, friendB) => friendA.localeCompare(friendB));
+// };
+// console.log(getSortedFriends(users));
+
+// // Задача 44
+// // общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender
+// const getTotalBalanceByGender = (users, gender) => {
+//     return [...users].filter(user => (user.gender === gender)).reduce((accu, user) => accu += user.balance, 0);
+// };
+// console.log(getTotalBalanceByGender(users, 'male')); // 12053
+// console.log(getTotalBalanceByGender(users, 'female')); // 8863
+
+// DONE
